@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
+    <script src="App.js" defer></script>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <title>Task Manager App</title>
+</head>
+
+<body>
+    <header id="heading-section">
+        <div id="create-task">Start a new task here</div>
+        <div class="modal">
+            <div class="modal-content">
+                <div id="modal-header">
+                    <h3>Create a new task</h3>
+                    <span class="close button-49">&times;</span>
+                </div>
+                <label for="task-name">Task Name:</label>
+                <input type="text" id="task-name" placeholder="Task name..." required>
+                <label for="task-desc">Task Description:</label>
+                <textarea id="task-description" rows="5" cols="10" placeholder="Task description..." required></textarea>
+                <button type="submit" id="add-task" class="button-32">Create Task</button>
+            </div>
+        </div>
+
+        <div id="heading">Task Manager App</div>
+    </header>
+    <main id="main-content">
+        <div id="open">
+            <div id="card-header">OPEN</div>
+            <div id="card-contents" class="append-task" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+        <div id="in-progress">
+            <div id="card-header">IN PROGRESS</div>
+            <div id="card-contents" class="append-task" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+        <div id="in-review">
+            <div id="card-header">IN REVIEW</div>
+            <div id="card-contents" class="append-task" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+        <div id="done">
+            <div id="card-header">DONE</div>
+            <div id="card-contents" class="append-task" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+    </main>
+</body>
+
+</html>
